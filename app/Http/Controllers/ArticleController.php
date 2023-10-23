@@ -20,6 +20,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $article = Article::create($request->all());
+
         return response()->json($article, 201);
     }
 
@@ -30,7 +31,7 @@ class ArticleController extends Controller
         return response()->json($article, 200);
     }
 
-    public function delete(Request $request, Article $article)
+    public function delete(Article $article)
     {
         $article->delete();
 
