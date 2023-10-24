@@ -7,16 +7,13 @@ use App\Http\Controllers\MeController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
-// Auth
 Route::post('register', RegisterController::class);
 Route::post('login', LoginController::class);
 
 Route::group(['middleware' => 'auth:sanctum'], function () {
-    // User
     Route::get('me', MeController::class);
     Route::post('logout', LogoutController::class);
 
-    // Articles
     Route::get('articles', [ArticleController::class, 'index']);
     Route::get('articles/{article}', [ArticleController::class, 'show']);
     Route::post('articles', [ArticleController::class, 'store']);
