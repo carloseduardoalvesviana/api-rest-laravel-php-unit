@@ -1,4 +1,4 @@
-## Endpoints
+## Routes
 
 - api/login [POST]
 - api/register [POST]
