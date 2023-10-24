@@ -50,7 +50,7 @@
             "vendor/bin/pint"
         ],
         "test": [
-            "vendor/bin/phpunit"
+            "php artisan test"
         ]
     },
     "extra": {
