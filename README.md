@@ -1,4 +1,4 @@
-## About
+## Endpoints
 
 - Login
 - Register
