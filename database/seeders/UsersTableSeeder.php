@@ -19,18 +19,14 @@ class UsersTableSeeder extends Seeder
 
         $password = Hash::make('12345678');
 
-        User::create([
-            'name' => 'Administrator',
-            'email' => 'admin@test.com',
-            'password' => $password,
-        ]);
-
-        for ($i = 0; $i < 50; $i++) {
-            User::create([
-                'name' => fake()->name(),
-                'email' => fake()->email(),
+        User::factory()->create(
+            [
+                'name' => 'Administrator',
+                'email' => 'admin@test.com',
                 'password' => $password,
-            ]);
-        }
+            ]
+        );
+
+        User::factory()->count(50)->create();
     }
 }

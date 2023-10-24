@@ -16,11 +16,6 @@ class ArticlesTableSeeder extends Seeder
         // Let's truncate our existing records to start from scratch.
         Article::truncate();
 
-        for ($i = 0; $i < 50; $i++) {
-            Article::create([
-                'title' => fake()->sentence(),
-                'body' => fake()->paragraph(),
-            ]);
-        }
+        Article::factory()->count(50)->create();
     }
 }
