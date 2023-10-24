@@ -1,7 +1,5 @@
 ## About
 
-Articles API
-
 - Login
 - Register
 - Create Article
@@ -9,7 +7,7 @@ Articles API
 - List Article
 - Delete Article
 
-## Test
+## Tests
 
 - Login [ok]
 - Register [ok]
